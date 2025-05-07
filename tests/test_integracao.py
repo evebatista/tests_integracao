@@ -2,7 +2,7 @@ import pytest
 from app.main import app, usuarios
 
 @pytest.fixture
-def client():
+def client():  
     app.testing = True
     with app.test_client() as client:
         yield client
